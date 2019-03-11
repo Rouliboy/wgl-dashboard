@@ -1,0 +1,7 @@
+[name^=form] {
+    margin: 1%;
+}
+
+[name=obligatoireSpan] {
+    color:#FA787E;
+}

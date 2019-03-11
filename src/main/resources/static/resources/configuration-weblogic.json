@@ -1,0 +1,43 @@
+{
+    "domaines" : 
+        [
+            {
+                "nomAffiche" : "LDJ3 - Local",
+                "nom" : "LDJ3",
+                "manages" : 
+                    [
+                        {
+                            "nom" : "weblogic local", 
+                            "url" : "http://localhost:7001/domaine-batch-exemple"
+                        }
+                    ]
+            } ,            {
+                "nomAffiche" : "LDJ3 - PIC",
+                "nom" : "LDJ3",
+                "manages" : 
+                    [
+                        {
+                            "nom" : "manage-PIC-440", 
+                            "url" : "http://alapr-ldng-9iba440.sii24.pole-emploi.intra:14401/domaine-batch-exemple"
+                        },
+                        {
+                            "nom" : "manage-PIC-441", 
+                            "url" : "http://alapr-ldng-9iba441.sii24.pole-emploi.intra:14401/domaine-batch-exemple"
+                        }
+                    ]
+            },
+                        {
+                "nomAffiche" : "LDJ1 - Local",
+                "nom" : "LDJ1",
+                "manages" : 
+                    [
+                        {
+                            "nom" : "manage-local", 
+                            "url" : "http://localhost:7001/domaine-exemple"
+                        }
+                    ]
+            } 
+        ]
+
+}
+

@@ -1,0 +1,14 @@
+<div id="informationsGenerales" class="tab-pane fade in active">
+	<div class="panel panel-default">
+		<div class="panel-heading">Informations générales</div>
+		<div ng-if="informationsGeneralesCtl.requettesHttpEnCours> 0" class="panel-body">
+			<animation-loading></animation-loading>
+		</div>
+		<div ng-if="informationsGeneralesCtl.requettesHttpEnCours == 0" class="panel-body" ng-show="!informationsGeneralesCtl.erreur">
+			Environnement : {{informationsGeneralesCtl.domaineEnvironnementSelectionne.name}}</b><br>
+            
+            Base URL : {{informationsGeneralesCtl.domaineEnvironnementSelectionne.url}}</b><br>
+        </div>
+		<erreur-personnalisee ng-model="informationsGeneralesCtl.erreur"></erreur-personnalisee>
+	</div>
+</div>

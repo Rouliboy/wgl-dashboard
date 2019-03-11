@@ -1,0 +1,51 @@
+<div class="panel panel-default"  ng-if="modulesCtl.requettesHttpEnCours == 0">
+	<div class="panel-heading">Services</div>
+	<div class="panel-body" ng-show="!modulesCtl.erreur">
+		<filtre-form texte="Filtre sur les services" ng-model="modulesCtl.parametreFiltre"></filtre-form>
+		<br />
+		<table ng-table="tableModulesEmbarques" class="table table-striped table-bordered table-hover">
+			<thead>
+			<tr class="active">
+				<th><a href="" ng-click="orderByField='name'; reverseSortModulesEmbarques = !reverseSortModulesEmbarques">Name</a></th>
+				<th><a href="">Statut</a></th>
+                <th><a href="">Date build</a></th>
+                <th><a href="">Version</a></th>
+                <th><a href="">Dépendences</a></th>
+                <th><a href="">Swagger</a></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="serviceInfo in modulesCtl.servicesInfos | filter:modulesCtl.parametreFiltre | orderBy:'name'">
+				<td >{{ serviceInfo.name }}</td>
+                <td >
+                    <span ng-if="serviceInfo.statut == 'UP'">
+                        <span class="label label-success">UP</span>
+                    </span>
+                    <span ng-if="serviceInfo.statut == 'DOWN'">
+                        <span class="label label-danger">DOWN</span>
+                    </span>
+                </td>
+                <td >{{ convertUTCDate(serviceInfo.build.time) }} </td>
+                <td ><span class="label label-default">{{ serviceInfo.build.version }}</span></td>
+				<td><span ng-repeat="dependency in serviceInfo.dependencies">
+                        {{ dependency.artifactId }} ({{dependency.version}})<span ng-show="! $last" ></span><br>
+                        </span>
+                </td>
+                <td >
+                    <span ng-if="serviceInfo.statut == 'UP'">
+                        <button ng-click="getSwaggerUrl(serviceInfo.name)">
+                          Ouvrir
+                        </button>
+                    </span>
+                    <span ng-if="serviceInfo.statut == 'DOWN'">
+                    </span>
+                
+                </td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<erreur-personnalisee ng-model="modulesCtl.erreur"></erreur-personnalisee>
+</div>
+<animation-loading ng-if="modulesCtl.requettesHttpEnCours > 0"></animation-loading>
+</div>

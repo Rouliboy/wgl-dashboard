@@ -1,0 +1,12 @@
+<form name="selectionDomaineEnvironnementFormulaire" class="form-inline row text-center">
+   
+	<div name="formGroup" class="form-group">
+		<label>Environment<span name="obligatoireSpan">*</span></label>
+    <select name="domaineSelect" class="form-control" ng-options="env.name for env in formulaireSelectionEnvironnementCtl.configurationEnvs.envs" ng-model="formulaireSelectionEnvironnementCtl.selectedEnv" required></select>
+	</div>
+    
+	<div name="formGroup" class="form-group">
+		<input type="submit" class="btn btn-primary" ng-click="formulaireSelectionEnvironnementCtl.setDomaineEnvironnnementSelectionne()" ng-disabled="!selectionDomaineEnvironnementFormulaire.$valid" value="Load">
+	</div>
+
+</form>
