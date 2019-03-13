@@ -4,7 +4,7 @@
 (function () {
 	"use strict";
 
-	angular.module('ApplicationDashboardWGL').factory('ModulesServices', ['$http',
+	angular.module('ApplicationDashboardWGL').factory('ServicesInfoServices', ['$http',
 																													   'FormulaireSelectionDomaineEnvironnementServices',
 																													   'SecuriteRESTServices',
 		function($http, FormulaireSelectionDomaineEnvironnementServices, SecuriteRESTServices) {
@@ -17,9 +17,9 @@
             
             function getServiceInfo(serviceName) {
 				var env = FormulaireSelectionDomaineEnvironnementServices.getDomaineEnvironnementSelectionne();
-                console.log("env = ", env);
+                //console.log("env = ", env);
                 var baseUrl = env.url + "/" + serviceName + "/actuator/info"
-                console.log("baseUrl = ", baseUrl);                
+                //console.log("baseUrl = ", baseUrl);                
 				var promise =  $http.get(baseUrl, {headers: {}}).success(function(response) {
 					return response;
 				});
@@ -27,7 +27,7 @@
 			}
             
             function getSwaggerUrl(serviceName) {
-                console.log("getSwaggerUrl");
+                //console.log("getSwaggerUrl");
 				var env = FormulaireSelectionDomaineEnvironnementServices.getDomaineEnvironnementSelectionne();
                 return env.url + "/" + serviceName + "/swagger-ui.html"
 			}

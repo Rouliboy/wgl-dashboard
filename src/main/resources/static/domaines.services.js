@@ -18,10 +18,34 @@
 								var services = {
 									getDomaines : getDomaines,
 									getConfigurationDomainesWeblogic : getConfigurationDomainesWeblogic,
+                                    getEnvironnements : getEnvironnements
 								};
 
 								function getDomaines() {
 									return domaines;
+								}
+                                
+								function getEnvironnements() {
+									var envs = {
+                                        "envs" : 
+                                            [
+                                                {
+                                                    "name" : "DEV1",
+                                                    "url":"https://api-location-esip-dev-2.dev.aws-nexity.fr"
+                                                } , 
+                                                {
+                                                    "name" : "DEV2",
+                                                    "url":"https://api-location-esip-dev-2.dev.aws-nexity.fr"
+                                                }  , 
+                                                {
+                                                    "name" : "DEV3",
+                                                    "url":"https://api-location-esip-dev-2.dev.aws-nexity.fr"
+                                                } 
+                                            ]
+
+                                    };
+                                    
+                                    return envs;
 								}
 
 								function getConfigurationDomainesWeblogic() {

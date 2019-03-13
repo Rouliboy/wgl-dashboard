@@ -8,9 +8,9 @@
 		function($routeProvider) {
 
 		$routeProvider.when('/', {
-				controller : 'ModulesController',
-				controllerAs : 'modulesCtl',
-				templateUrl: 'administration-supervision/modules/modules.html'
+				controller : 'ServicesController',
+				controllerAs : 'servicesCtl',
+				templateUrl: 'administration-supervision/services/services-info.html'
 			})
 		}
 	]);

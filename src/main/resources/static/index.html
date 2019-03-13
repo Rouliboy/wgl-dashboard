@@ -23,13 +23,10 @@
 	<div class="text-center"><span id="titreAppication" class="text-center">WGL Dashboard</span></div>
     
     <formulaire-selection-environnement></formulaire-selection-environnement>
-	<!--informations-generales></informations-generales-->
+	<informations-generales></informations-generales>
 	<administration-supervision></administration-supervision>
 </body>
 
-<!-- build:js config.min.js -->
-<script src="config.js"></script>
-<!-- endbuild -->
 
 <!-- build:js vendor.min.js -->
 <!-- api js externes -->
@@ -58,48 +55,20 @@
 <script src="domaines.services.js"></script>
 <script src="commun/services/mode.services.js"></script>
 <script src="commun/services/securite-REST.services.js"></script>
-<script src="administration-supervision/batch/batch.services.js"></script>
-<script src="administration-supervision/caches/caches.services.js"></script>
-<script src="administration-supervision/cartes-appels/cartes-appels.services.js"></script>
-<script src="administration-supervision/desactivation/desactivation.services.js"></script>
-<script src="administration-supervision/logs-centralises/logs-centralises.services.js"></script>
-<script src="administration-supervision/logs-chaud/entrees-sorties/logs-entrees-sorties.services.js"></script>
-<script src="administration-supervision/logs-chaud/categories/tracer-categories.services.js"></script>
-<script src="administration-supervision/logs-chaud/utilisateurs/tracer-utilisateurs.services.js"></script>
-<script src="administration-supervision/metrologie/metrologie.services.js"></script>
-<script src="administration-supervision/modules/modules.services.js"></script>
-<script src="administration-supervision/proprietes/proprietes.services.js"></script>
-<script src="administration-supervision/quartz/quartz.services.js"></script>
-<script src="commun/services/logs.services.js"></script>
+<script src="administration-supervision/services/services-info.services.js"></script>
 <script src="formulaire-selection-domaine-environnement/formulaire-selection-domaine-environnement.services.js"></script>
 <script src="informations-generales/informations-generales.services.js"></script>
 
 <!-- controllers angular -->
 <script src="application.controller.js"></script>
 <script src="administration-supervision/administration-supervision.controller.js"></script>
-<script src="administration-supervision/batch/batch.controller.js"></script>
-<script src="administration-supervision/batch/rapport/rapport.controller.js"></script>
-<script src="administration-supervision/batch/formulaire-job/formulaire-job.controller.js"></script>
-<script src="administration-supervision/caches/caches.controller.js"></script>
-<script src="administration-supervision/cartes-appels/cartes-appels.controller.js"></script>
-<script src="administration-supervision/desactivation/desactivation.controller.js"></script>
-<script src="administration-supervision/divers/divers.controller.js"></script>
-<script src="administration-supervision/logs-centralises/logs-centralises.controller.js"></script>
-<script src="administration-supervision/logs-chaud/categories/tracer-categories.controller.js"></script>
-<script src="administration-supervision/logs-chaud/entrees-sorties/logs-entrees-sorties.controller.js"></script>
-<script src="administration-supervision/logs-chaud/utilisateurs/tracer-utilisateurs.controller.js"></script>
-<script src="administration-supervision/metrologie/metrologie.controller.js"></script>
-<script src="administration-supervision/modules/modules.controller.js"></script>
-<script src="administration-supervision/proprietes/proprietes.controller.js"></script>
-<script src="administration-supervision/quartz/quartz.controller.js"></script>
+<script src="administration-supervision/services/services-info.controller.js"></script>
 <script src="formulaire-selection-domaine-environnement/formulaire-selection-domaine-environnement.controller.js"></script>
 <script src="informations-generales/informations-generales.controller.js"></script>
 
 <!-- directives angular -->
 <script src="application.directives.js"></script>
-<script src="administration-supervision/logs-chaud/logs-chaud.directives.js"></script>
 <script src="commun/templates/templates.directives.js"></script>
-
 <!-- endbuild -->
 
 </html>

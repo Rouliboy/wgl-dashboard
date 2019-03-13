@@ -15,7 +15,7 @@
 			 * @returns true si tab est actif
 			 */
 			controller.isActive = function (tab) {
-				if(tab === 'Modules') {
+				if(tab === 'Services') {
 					return $location.url().endsWith('/');
 				} else {
 					return $location.url().endsWith(tab);

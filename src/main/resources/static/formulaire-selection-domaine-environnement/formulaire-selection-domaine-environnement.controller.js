@@ -20,13 +20,16 @@
 			
 			function initialiser() {
                 console.log("Init FormulaireSelectionEnvironnementController");
-                // Récupération de la configuration weblogic
-                DomainesServices.getConfigurationDomainesWeblogic().then(function (response) {
+                controller.configurationEnvs = DomainesServices.getEnvironnements();
+                controller.selectedEnv = controller.configurationEnvs.envs[0];
+                FormulaireSelectionDomaineEnvironnementServices.setDomaineEnvironnementSelectionne(controller.selectedEnv);
+
+                /*DomainesServices.getConfigurationDomainesWeblogic().then(function (response) {
                     controller.configurationEnvs = response.data;
                     console.log("Init controller.configurationEnvs=", controller.configurationEnvs);
                     controller.selectedEnv = controller.configurationEnvs.envs[0];
                     FormulaireSelectionDomaineEnvironnementServices.setDomaineEnvironnementSelectionne(controller.selectedEnv);
-                });
+                });*/
 
 			}
 		}

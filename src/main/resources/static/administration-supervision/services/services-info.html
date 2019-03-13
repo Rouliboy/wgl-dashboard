@@ -1,7 +1,7 @@
-<div class="panel panel-default"  ng-if="modulesCtl.requettesHttpEnCours == 0">
+<div class="panel panel-default"  ng-if="servicesCtl.requettesHttpEnCours == 0">
 	<div class="panel-heading">Services</div>
-	<div class="panel-body" ng-show="!modulesCtl.erreur">
-		<filtre-form texte="Filtre sur les services" ng-model="modulesCtl.parametreFiltre"></filtre-form>
+	<div class="panel-body" ng-show="!servicesCtl.erreur">
+		<filtre-form texte="Filtre sur les services" ng-model="servicesCtl.parametreFiltre"></filtre-form>
 		<br />
 		<table ng-table="tableModulesEmbarques" class="table table-striped table-bordered table-hover">
 			<thead>
@@ -15,7 +15,7 @@
 			</tr>
 			</thead>
 			<tbody>
-			<tr ng-repeat="serviceInfo in modulesCtl.servicesInfos | filter:modulesCtl.parametreFiltre | orderBy:'name'">
+			<tr ng-repeat="serviceInfo in servicesCtl.servicesInfos | filter:servicesCtl.parametreFiltre | orderBy:'name'">
 				<td >{{ serviceInfo.name }}</td>
                 <td >
                     <span ng-if="serviceInfo.statut == 'UP'">
@@ -45,7 +45,7 @@
 			</tbody>
 		</table>
 	</div>
-	<erreur-personnalisee ng-model="modulesCtl.erreur"></erreur-personnalisee>
+	<erreur-personnalisee ng-model="servicesCtl.erreur"></erreur-personnalisee>
 </div>
-<animation-loading ng-if="modulesCtl.requettesHttpEnCours > 0"></animation-loading>
+<animation-loading ng-if="servicesCtl.requettesHttpEnCours > 0"></animation-loading>
 </div>

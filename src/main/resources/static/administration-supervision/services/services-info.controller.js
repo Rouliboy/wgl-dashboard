@@ -4,10 +4,10 @@
 (function () {
 	"use strict";
 
-	angular.module('ApplicationDashboardWGL').controller('ModulesController', ['$scope', '$window',
-		                                                                                         'ModulesServices',
+	angular.module('ApplicationDashboardWGL').controller('ServicesController', ['$scope', '$window',
+		                                                                                         'ServicesInfoServices',
 
-		function ($scope, $window, ModulesServices) {
+		function ($scope, $window, ServicesInfoServices) {
 
 			var controller = this;
 
@@ -44,8 +44,8 @@
                 
                 angular.forEach(services, function(value, key) {
                     controller.requettesHttpEnCours++;
-                    ModulesServices.getServiceInfo(value).then(function(response) {
-                        console.info("getServiceInfo response = ", response.data);
+                    ServicesInfoServices.getServiceInfo(value).then(function(response) {
+                        //console.info("getServiceInfo response = ", response.data);
                         var service = response.data;
                         service.name=value;
                         service.statut = "UP";
@@ -64,7 +64,7 @@
             
 			$scope.getSwaggerUrl = function(serviceName) {
                 
-				$window.open(ModulesServices.getSwaggerUrl(serviceName));
+				$window.open(ServicesInfoServices.getSwaggerUrl(serviceName));
 			}
             
 			$scope.convertUTCDate= function(inputDate) {
