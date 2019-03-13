@@ -36,11 +36,7 @@
                                                 {
                                                     "name" : "DEV2",
                                                     "url":"https://api-location-esip-dev-2.dev.aws-nexity.fr"
-                                                }  , 
-                                                {
-                                                    "name" : "DEV3",
-                                                    "url":"https://api-location-esip-dev-2.dev.aws-nexity.fr"
-                                                } 
+                                                }
                                             ]
 
                                     };
