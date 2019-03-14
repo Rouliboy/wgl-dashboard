@@ -12,13 +12,25 @@
 			var controller = this;
 
             var services = [
-                "autorisation", 
-                "tiers", 
-                "location-organisation", 
-                "commercialisation-bien-a-louer", 
-                "gestion-mandat-location", 
-                "biens-immobiliers",
-                "comptabilite-gerance-commun"
+				"autorisation",
+				"biens-immobiliers",
+				"commercialisation-bien-a-louer",
+				"gestion-mandat-location",
+				"tiers",
+				"location-organisation",
+				"transverse-location",
+				"commercialisation-mandats-location",
+				"registre-mandats",
+				"nomenclatures",
+				"referentiel-geographique",
+				"gestion-technique-immeubles",
+				"transverse",
+				"gestion-mandats-gestion-locative",
+				"transverse-gerance",
+				"gestion-baux",
+				"comptabilite-gerance-commun",
+				"parametrage-comptabilite",
+				"comptabilite-transverse-supervision"
             ];
             
 			initialiser();
